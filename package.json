@@ -1,0 +1,14 @@
+{
+  "name": "forward-mcp",
+  "version": "1.1.0",
+  "description": "MCP server for Forward (getforward.xyz) — agents buy qualified leads, sales meetings, SEO content, and verified ad conversions, billed per verified result. Self-provisioning: forward_signup mints an API key with $25 free credits.",
+  "mcpName": "xyz.getforward/forward",
+  "license": "MIT",
+  "main": "mcp-server.js",
+  "bin": { "forward-mcp": "mcp-server.js" },
+  "scripts": { "start": "node mcp-server.js" },
+  "homepage": "https://getforward.xyz",
+  "repository": { "type": "git", "url": "git+https://github.com/joshfreeland/forward-mcp.git" },
+  "keywords": ["mcp", "mcp-server", "leads", "sales", "marketing", "agentic-commerce", "x402", "pay-per-result"],
+  "engines": { "node": ">=18" }
+}

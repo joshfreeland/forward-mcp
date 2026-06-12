@@ -52,6 +52,16 @@ The agent calls **`forward_signup`** once → gets an API key funded with **$25 
 
 `credits` (prepaid, default — $25 free to start) · `x402` (HTTP 402 + USDC, pay-per-call) · `stripe_acp` (delegated token with `max_charge_usd`)
 
+## Run the stdio server locally (optional)
+
+This repo ships a runnable zero-dependency stdio MCP server (mcp-server.js) that talks to the hosted Forward API:
+
+```bash
+node mcp-server.js            # or: docker build -t forward-mcp . && docker run -i forward-mcp
+```
+
+It exposes the same tools, including self-provisioning forward_signup (the minted key is remembered for the session). The remote endpoint at https://getforward.xyz/mcp is the recommended path — no install at all.
+
 ## Plain HTTP / SDKs
 
 Everything the MCP tools do is also plain REST — [OpenAPI](https://getforward.xyz/openapi.yaml) · [llms.txt](https://getforward.xyz/llms.txt) · [docs](https://getforward.xyz/docs.html). Zero-dependency SDK clients for TypeScript ([`forward.ts`](forward.ts)) and Python ([`forward.py`](forward.py)) are in this repo.
