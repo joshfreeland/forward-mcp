@@ -52,6 +52,10 @@ The agent calls **`forward_signup`** once → gets an API key funded with **$25 
 
 `credits` (prepaid, default — $25 free to start) · `x402` (HTTP 402 + USDC, pay-per-call) · `stripe_acp` (delegated token with `max_charge_usd`)
 
+## Use Forward in your agent framework
+
+Ready-to-paste integrations for [LangChain](examples/langchain_forward.py), the [Vercel AI SDK](examples/vercel-ai-sdk.ts), and [OpenAI/Anthropic tool calling](examples/openai_tools.py) — see [examples/](examples/). Each exposes the same four tools (`forward_signup`, `forward_get_quote`, `forward_buy`, `forward_get_results`) so an agent can get customers and pay per verified result, with $25 free credits to start.
+
 ## Run the stdio server locally (optional)
 
 This repo ships a runnable zero-dependency stdio MCP server (mcp-server.js) that talks to the hosted Forward API:
